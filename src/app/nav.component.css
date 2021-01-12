@@ -1,0 +1,10 @@
+.nav-botton{
+  margin-left: 20px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.nav-panel {
+  display: flex;
+  justify-content: space-between;
+}

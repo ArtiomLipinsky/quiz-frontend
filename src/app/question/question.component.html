@@ -1,12 +1,39 @@
 <mat-card>
+  <mat-card-title></mat-card-title>
+  <span *ngIf="question.id">Edit</span>
+  <span *ngIf="!question.id">Create new</span>
   <mat-card-content>
-      <form>
-          <mat-form-field>
-              <input matInput placeholder="Question">
-          </mat-form-field>
-      </form>
+    <form>
+      <mat-form-field class="fullWidth">
+        <mat-label>Quesion</mat-label>
+        <input [(ngModel)]="question.text" name="question" matInput>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Correct answer</mat-label>
+        <input [(ngModel)]="question.correctAnswer" name="correctAnswer" matInput>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Answer</mat-label>
+        <input [(ngModel)]="question.wrongAnswerA" name="wrongAnswerA" matInput>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Answer</mat-label>
+        <input [(ngModel)]="question.wrongAnswerB" name="wrongAnswerB" matInput>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <mat-label>Answer</mat-label>
+        <input [(ngModel)]="question.wrongAnswerC" name="wrongAnswerC" matInput>
+      </mat-form-field>
+    </form>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button color="accent">POST</button>
+    <button *ngIf="!question.id" (click)="post(question)" mat-button>CREATE</button>
+    <button *ngIf="question.id" (click)="put(question)" mat-button>EDIT</button>
+    <button *ngIf="question.id" (click)="getEmpty()" mat-button>NEW</button>
   </mat-card-actions>
 </mat-card>
+<questions></questions>
