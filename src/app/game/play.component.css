@@ -1,0 +1,16 @@
+.fullWidth {
+  width: 100%;
+}
+
+.clickLink {
+  cursor: pointer;
+}
+
+.selected {
+  border: 2px solid black;
+}
+
+.action-nav{
+  display: flex;
+  justify-content: flex-start;
+}

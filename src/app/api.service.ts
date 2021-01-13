@@ -61,6 +61,10 @@ export class ApiService {
     return this.http.get(`${Url}/api/quizzes`)
   }
 
+  public getAllQuizzes() {
+    return this.http.get(`${Url}/api/quizzes/all`)
+  }
+
   selectQuestion(question: Question){
     this.selectedQuestion.next(question);
   }

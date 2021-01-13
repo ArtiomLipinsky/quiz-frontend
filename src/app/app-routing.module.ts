@@ -7,6 +7,9 @@ import { QuizzesComponent } from './quiz/quizzes.component';
 import { QuestionsComponent } from './question/questions.component';
 import { HomeComponent } from './home.component';
 import { RegisterComponent } from './user/register.component';
+import { LoginComponent } from './user/login.component';
+import { PlayQuizComponent } from './game/playQuiz.component';
+import { FinishedComponent } from './game/finished.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +19,9 @@ const routes: Routes = [
   { path: 'quiz', component: QuizComponent },
   { path: 'quizzes', component: QuizzesComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'playQuiz/:quizId', component: PlayQuizComponent },
+  { path: 'finished', component: FinishedComponent }
 ];
 
 @NgModule({

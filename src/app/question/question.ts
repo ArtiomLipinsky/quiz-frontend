@@ -7,4 +7,6 @@ export class Question
   wrongAnswerA!: string;
   wrongAnswerB!: string;
   wrongAnswerC!: string;
+  answers!: string[];
+  selectedAnswer!: string;
 }
